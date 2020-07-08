@@ -1,0 +1,26 @@
+{
+    "name": "romelpaano/contact-laravel-package",
+    "description": "Laravel package to send Query to admin.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Romel Niño Paano",
+            "email": "rpaano02@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+             "RomelPaano\\Contact\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RomelPaano\\Contact\\ContactServiceProvider"
+            ]
+        }
+    }
+}
