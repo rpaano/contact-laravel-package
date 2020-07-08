@@ -17,7 +17,7 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
-        Mail::to('12345678i@gmail.com')->send(new ContactMailable($request));
+        Mail::to(config("contact.email"))->send(new ContactMailable($request));
 
         $contact = resolve(Contact::class);
         $contact->create($request->all());
