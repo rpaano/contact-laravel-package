@@ -8,7 +8,7 @@ class ContactServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        dd("It works!");
+        $this->loadRoutesFrom(__DIR__.'/routes/web.php');
     }
 
     public function register()
