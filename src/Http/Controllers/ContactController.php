@@ -4,6 +4,7 @@ namespace RomelPaano\Contact\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use RomelPaano\Contact\Models\Contact;
 
 class ContactController extends Controller
 {
@@ -15,6 +16,11 @@ class ContactController extends Controller
     public function store(Request $request)
     {
 
-        return ;
+
+        $contact = resolve(Contact::class);
+
+        $contact->create($request->all());
+
+        return back();
     }
 }
