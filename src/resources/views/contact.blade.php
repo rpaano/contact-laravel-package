@@ -9,5 +9,12 @@
 </head>
 <body>
     <h1>Contact U Anytime</h1>
+    <form action="{{ route('contact') }}" method="post">
+        @csrf
+        <input type="text" name="name" placeholder="your name">
+        <input type="text" name="email" placeholder="your email">
+        <textarea name="message" id="" cols="30" rows="10" placeholder="Your Query"></textarea>
+        <input type="submit">
+    </form>
 </body>
 </html>
